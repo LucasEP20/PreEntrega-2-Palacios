@@ -1,0 +1,506 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/*-------------------------------------------------VISTA MOBILE*/
+@media screen and (min-width: 0px){
+    .grid-contenedor{
+        width: 100%;
+        color: black;
+        font-size: 40px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        display: grid;
+    
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer"
+        ;
+    }
+    .encabezado{
+        background-color: #FFAE6D;
+        grid-area: header;
+    }
+    .contenido{
+        grid-area: main;
+    }
+    .pie{
+        background-color: black;
+        grid-area: footer;
+    }
+    /* HEADER */
+    .nombre{
+        display: flex;
+        grid-area: nombre;
+        align-items: center;
+        text-align: center;
+    }
+    
+    header{
+        background-color: black;
+        position: sticky;
+        top: 0;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header div img{
+        width: 70px;
+        height: 70px;
+    
+    }
+    header div nav{
+        height: 20px;
+        text-align: center;
+    }
+    header div nav ul{
+        list-style: none;
+        display: inline-block;
+        padding: 18px;
+        
+    }
+    header div nav ul li{
+        float: left;
+        font-size: 20px;
+        margin-top: 20px;
+        border:2px solid black;
+        background-color: #FECD70;
+        
+    }
+    
+    header ul li a{
+        color: white;
+        font-weight: bold; 
+        font-size: none;
+        padding: 18px;
+        text-decoration: none;
+    }
+    .encabezado .menu nav ul li:hover{
+        background: rgb(255,174,109);
+        background: linear-gradient(90deg, rgba(255,174,109,1) 0%, rgba(246,237,192,1) 50%, rgba(255,174,109,1) 100%);
+    }
+    
+    /*------------------------------- MAIN */
+    .hero{
+        background-image: url("../img/local.jpg");
+        width: 100%;
+        height: 80vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .hero div{
+        text-align: center;
+        background-color: black;
+        color: white;
+    }
+    
+    .contenido .productos{
+        border: black 2px;
+        align-items: center;
+    }
+    .h2{
+        text-align: center;
+    }
+    
+    .contenido .productos .contenedor-producto{
+        justify-content: space-around;
+        align-items: center;
+    
+    }
+    .contenedor-producto .card{
+        width: 100%;
+        margin: 0 auto;
+        color: black;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        display: grid;
+    
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto auto  ;
+    
+        grid-template-areas: 
+        "titulo titulo "
+        "imagen descripcion"
+        ;
+        border: 2px solid black;
+    }
+    .titulo-producto{
+        grid-area: titulo;
+        text-align: center;
+        font-size: 20px;
+        padding: 5px;
+        margin: 5px;
+        grid-column: span 2;
+    }
+    .img-producto{
+        grid-area: imagen;
+        width: 300px;
+        height: 300px;
+        margin: 5px;
+        padding: 5px;
+    
+    }
+    .descrip-producto{
+        grid-area: descripcion;
+        font-size: 15px;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .contenido .img{
+        width: 300px;
+        height: 300px;
+    }
+    main{background-color: #FECD70;}
+    
+    /*Pagina hace tu pedido*/
+    .contenido .productos-pedido{
+        border: black 2px;
+        align-items: center;
+    }
+    .contenido .productos-pedido h2{
+        text-align: center;
+    }
+    
+    .contenido .productos-pedido .contenedor-producto{
+        justify-content: space-around;
+        align-items: center;
+    
+    }
+    .contenedor-producto-pedido .card{
+        width: 100%;
+        margin: 0 auto;
+        color: black;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        display: grid;
+    
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto auto 10px;
+    
+        grid-template-areas: 
+        "titulo titulo boton-pedido"
+        "imagen descripcion descripcion "
+        ;
+        border: 2px solid black;
+    }
+    .titulo-producto{
+        grid-area: titulo;
+        text-align: center;
+        font-size: 20px;
+        padding: 5px;
+        margin: 5px;
+        grid-column: span 2;
+    }
+    .img-producto{
+        grid-area: imagen;
+        width: 300px;
+        height: 300px;
+        margin: 5px;
+        padding: 5px;
+    
+    }
+    .descrip-producto{
+        grid-area: descripcion;
+        font-size: 15px;
+        text-align: justify;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+    .agregar-pedido{
+        grid-area: boton-pedido;
+    }
+    
+    .productos-pedido div a{
+        display: inline-block;
+        text-decoration: none;
+        background-color: blue;
+        color: white;
+    }
+    
+    /*Pagina Historia*/
+    .contenedor-historia .historia{
+        width: 100%;
+        margin: 0 auto;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto auto;
+    
+        grid-template-areas: 
+        "img descrip"
+        "img descrip"
+        ;
+    }
+    
+    .img{
+        grid-area: img;
+        width: 300px;
+        height: 300px;
+        margin: 5px;
+        padding: 5px;
+    }
+    .descrip{
+        grid-area: descrip;
+        font-size: 15px;
+        text-align: justify;
+        margin-bottom: 20px;
+    }
+    /* ------------------------------------------FOOTER */
+    footer{
+        background-color: black;
+    }
+    footer div{
+        text-align: center;
+        color: white;
+    }
+}
+
+/*----------------------------------------------- VISTA DESKTOP*/
+
+@media screen and (min-width: 1024px) {
+    .grid-contenedor{
+        width: 100%;
+        margin: 0 auto;
+        color: black;
+        font-size: 40px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        display: grid;
+    
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto auto auto ;
+        grid-template-areas: 
+        "header header header"
+        "main main main"
+        "footer footer footer"
+        ;
+    }
+    .encabezado{
+        background-color: #FFAE6D;
+        grid-area: header;
+    }
+    .contenido{
+        grid-area: main;
+    }
+    .pie{
+        background-color: black;
+        grid-area: footer;
+    }
+    /* HEADER */
+    .nombre{
+        display: flex;
+        grid-area: nombre;
+        align-items: center;
+        text-align: center;
+    }
+    
+    header{
+        background-color: black;
+        position: sticky;
+        top: 0;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .menu{
+        display: inline-block;
+        
+    }
+    header div img{
+        width: 150px;
+        height: 150px;
+    
+    }
+    header div nav{
+        height: 60px;
+        text-align: center;
+    }
+    header div nav ul{
+        list-style: none;
+        display: inline-block;
+        padding: 18px;
+        
+    }
+    header div nav ul li{
+        float: left;
+        font-size: 20px;
+        margin-top: 20px;
+        border:2px solid black;
+        
+    }
+    
+    header ul li a{
+        color: white;
+        font-weight: bold; 
+        font-size: none;
+        padding: 18px;
+        text-decoration: none;
+    }
+    .encabezado .menu nav ul li:hover{
+        background: rgb(255,174,109);
+        background: linear-gradient(90deg, rgba(255,174,109,1) 0%, rgba(246,237,192,1) 50%, rgba(255,174,109,1) 100%);
+    }
+    
+    /*------------------------------- MAIN */
+    .contenido .productos{
+        border: black 2px;
+        align-items: center;
+    }
+    .h2{
+        text-align: center;
+    }
+    
+    .contenido .productos .contenedor-producto{
+        justify-content: space-around;
+        align-items: center;
+    
+    }
+    .contenedor-producto .card{
+        width: 100%;
+        margin: 0 auto;
+        color: black;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        display: grid;
+    
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto auto  ;
+    
+        grid-template-areas: 
+        "titulo titulo "
+        "imagen descripcion"
+        ;
+        border: 2px solid black;
+    }
+    .titulo-producto{
+        grid-area: titulo;
+        text-align: center;
+        padding: 1px;
+        margin: 1px;
+        grid-column: span 2;
+    }
+    .img-producto{
+        grid-area: imagen;
+        width: 300px;
+        height: 300px;
+        margin: 5px;
+        padding: 5px;
+    
+    }
+    .descrip-producto{
+        grid-area: descripcion;
+        font-size: 15px;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .contenido .img{
+        width: 300px;
+        height: 300px;
+    }
+    main{background-color: #FECD70;}
+    
+    /*Pagina hace tu pedido*/
+    .contenido .productos-pedido{
+        border: black 2px;
+        align-items: center;
+    }
+    .contenido .productos-pedido h2{
+        text-align: center;
+    }
+    
+    .contenido .productos-pedido .contenedor-producto{
+        justify-content: space-around;
+        align-items: center;
+    
+    }
+    .contenedor-producto-pedido .card{
+        width: 100%;
+        margin: 0 auto;
+        color: black;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        display: grid;
+    
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto auto 10px;
+    
+        grid-template-areas: 
+        "titulo titulo boton-pedido"
+        "imagen descripcion descripcion "
+        ;
+        border: 2px solid black;
+    }
+    .titulo-producto{
+        grid-area: titulo;
+        text-align: center;
+        font-size: 20px;
+        padding: 5px;
+        margin: 5px;
+        grid-column: span 2;
+    }
+    .img-producto{
+        grid-area: imagen;
+        width: 300px;
+        height: 300px;
+        margin: 5px;
+        padding: 5px;
+    
+    }
+    .descrip-producto{
+        grid-area: descripcion;
+        font-size: 15px;
+        text-align: justify;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+    .agregar-pedido{
+        grid-area: boton-pedido;
+    }
+    
+    .productos-pedido div a{
+        display: inline-block;
+        text-decoration: none;
+        background-color: blue;
+        color: white;
+    }
+    
+    /*Pagina Historia*/
+    .contenedor-historia .historia{
+        width: 100%;
+        margin: 0 auto;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto auto;
+    
+        grid-template-areas: 
+        "img descrip"
+        "img descrip"
+        ;
+    }
+    
+    .img{
+        grid-area: img;
+        width: 300px;
+        height: 300px;
+        margin: 5px;
+        padding: 5px;
+    }
+    .descrip{
+        grid-area: descrip;
+        font-size: 15px;
+        text-align: justify;
+        margin-bottom: 20px;
+    }
+    /* ------------------------------------------FOOTER */
+    footer{
+        background-color: black;
+    }
+    footer div{
+        text-align: center;
+        color: white;
+    }
+
+
+}
