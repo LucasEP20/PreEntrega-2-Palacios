@@ -1,149 +1,211 @@
-.contenido .productos{
-    border: black 2px;
-    align-items: center;
-}
-.h2{
-    text-align: center;
-}
-
-.contenido .productos .contenedor-producto{
-    justify-content: space-around;
-    align-items: center;
-
-}
-.contenedor-producto .card{
-    width: 100%;
-    margin: 0 auto;
-    color: black;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    display: grid;
-
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: auto auto  ;
-
-    grid-template-areas: 
-    "titulo titulo "
-    "imagen descripcion"
-    ;
-    border: 2px solid black;
-}
-.titulo-producto{
-    grid-area: titulo;
-    text-align: center;
-    padding: 1px;
-    margin: 1px;
-    grid-column: span 2;
-}
-.img-producto{
-    grid-area: imagen;
-    width: 300px;
-    height: 300px;
-    margin: 5px;
-    padding: 5px;
-
-}
-.descrip-producto{
-    grid-area: descripcion;
-    font-size: 15px;
-    text-align: center;
-    align-items: center;
-}
-
-.contenido .img{
-    width: 300px;
-    height: 300px;
-}
-main{background-color: #FECD70;}
-
-/*Pagina hace tu pedido*/
-.contenido .productos-pedido{
-    border: black 2px;
-    align-items: center;
-}
-.contenido .productos-pedido h2{
-    text-align: center;
-}
-
-.contenido .productos-pedido .contenedor-producto{
-    justify-content: space-around;
-    align-items: center;
-
-}
-.contenedor-producto-pedido .card{
-    width: 100%;
-    margin: 0 auto;
-    color: black;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    display: grid;
-
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: auto auto 10px;
-
-    grid-template-areas: 
-    "titulo titulo boton-pedido"
-    "imagen descripcion descripcion "
-    ;
-    border: 2px solid black;
-}
-.titulo-producto{
-    grid-area: titulo;
-    text-align: center;
-    font-size: 20px;
-    padding: 5px;
-    margin: 5px;
-    grid-column: span 2;
-}
-.img-producto{
-    grid-area: imagen;
-    width: 300px;
-    height: 300px;
-    margin: 5px;
-    padding: 5px;
-
-}
-.descrip-producto{
-    grid-area: descripcion;
-    font-size: 15px;
-    text-align: justify;
-    align-items: flex-start;
-    margin-bottom: 20px;
-}
-.agregar-pedido{
-    grid-area: boton-pedido;
+main{
+    background-color: #FECD70;
+    .prodcutos{
+        border: black 2px;
+        align-items: center;
+        h2{
+            text-align: center;
+        }
+        .contenedor-producto{
+            justify-content: space-around;
+            align-items: center;
+            .card{
+                width: 100%;
+                margin: 0 auto;
+                color: black;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                display: grid;
+            
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: auto auto  ;
+            
+                grid-template-areas: 
+                "titulo titulo "
+                "imagen descripcion"
+                ;
+                border: 2px solid black;
+                .titulo-producto{
+                    grid-area: titulo;
+                    text-align: center;
+                    font-size: 20px;
+                    padding: 5px;
+                    margin: 5px;
+                    grid-column: span 2;
+                }
+                .img-producto{
+                    grid-area: imagen;
+                    width: 300px;
+                    height: 300px;
+                    margin: 5px;
+                    padding: 5px;
+                
+                }
+                .descrip-producto{
+                    grid-area: descripcion;
+                    font-size: 15px;
+                    text-align: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+    /*Pagina Historia*/
+    .contenedor-historia .historia{
+        width: 100%;
+        margin: 0 auto;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto auto;
+                    
+        grid-template-areas: 
+        "img descrip"
+        "img descrip"
+        ;
+    }
+                
+    .img{
+        grid-area: img;
+        width: 300px;
+        height: 300px;
+        margin: 5px;
+        padding: 5px;
+    }
+    .descrip{
+        grid-area: descrip;
+        font-size: 15px;
+        text-align: justify;
+        margin-bottom: 20px;
+    }
 }
 
-.productos-pedido div a{
-    display: inline-block;
-    text-decoration: none;
-    background-color: blue;
-    color: white;
-}
 
-/*Pagina Historia*/
-.contenedor-historia .historia{
-    width: 100%;
-    margin: 0 auto;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: auto auto;
-
-    grid-template-areas: 
-    "img descrip"
-    "img descrip"
-    ;
-}
-
-.img{
-    grid-area: img;
-    width: 300px;
-    height: 300px;
-    margin: 5px;
-    padding: 5px;
-}
-.descrip{
-    grid-area: descrip;
-    font-size: 15px;
-    text-align: justify;
-    margin-bottom: 20px;
+/*DESKTOP*/
+main{
+    background-color: #FECD70;
+    .hero{
+        background-image: url("../img/local.jpg");
+        width: 100%;
+        height: 80vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        div{
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+    }
+    .productos{
+        border: black 2px;
+        align-items: center;
+        .contenedor-producto{
+            justify-content: space-around;
+            align-items: center;
+            .card{
+                width: 100%;
+                margin: 0 auto;
+                color: black;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                display: grid;
+            
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: auto auto  ;
+            
+                grid-template-areas: 
+                "titulo titulo "
+                "imagen descripcion"
+                ;
+                border: 2px solid black;
+                .titulo-producto{
+                    grid-area: titulo;
+                    text-align: center;
+                    font-size: 20px;
+                    padding: 5px;
+                    margin: 5px;
+                    grid-column: span 2;
+                }
+                .img-producto{
+                    grid-area: imagen;
+                    width: 300px;
+                    height: 300px;
+                    margin: 5px;
+                    padding: 5px;
+                
+                }
+                .descrip-producto{
+                    grid-area: descripcion;
+                    font-size: 15px;
+                    text-align: center;
+                    align-items: center;
+                }
+                
+            }
+            
+        }
+    }
+    /*Pagina hace tu pedido*/
+    .prodcutos-pedido{
+        border: black 2px;
+        align-items: center;
+        h2{
+            text-align: center;
+        }
+        .contenedor-producto-pedido{
+            justify-content: space-around;
+            align-items: center;
+        }
+        .contenedor-producto-pedido{
+            .card{
+                width: 100%;
+            margin: 0 auto;
+            color: black;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: auto auto 10px;
+            grid-template-areas: 
+            "titulo titulo boton-pedido"
+            "imagen descripcion descripcion "
+            ;
+            border: 2px solid black;
+            .titulo-producto{
+                grid-area: titulo;
+                text-align: center;
+                font-size: 20px;
+                padding: 5px;
+                margin: 5px;
+                grid-column: span 2;
+            }
+            .img-producto{
+                grid-area: imagen;
+                width: 300px;
+                height: 300px;
+                margin: 5px;
+                padding: 5px;
+            
+            }
+            .descrip-producto{
+                grid-area: descripcion;
+                font-size: 15px;
+                text-align: justify;
+                align-items: flex-start;
+                margin-bottom: 20px;
+            }
+            .agregar-pedido{
+                grid-area: boton-pedido;
+            }
+            }
+            
+            
+        }
+        div{
+            a{
+                display: inline-block;
+                text-decoration: none;
+                background-color: blue;
+                color: white;
+            }
+        }
+    }
 }

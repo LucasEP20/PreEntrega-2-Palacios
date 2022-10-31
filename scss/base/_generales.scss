@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.grid-contenedor{
+    width: 100%;
+    color: black;
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: grid;
+
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    ;
+}
+.encabezado{
+    background-color: #FFAE6D;
+    grid-area: header;
+}
+.contenido{
+    grid-area: main;
+}
+.pie{
+    background-color: black;
+    grid-area: footer;
+}
+
