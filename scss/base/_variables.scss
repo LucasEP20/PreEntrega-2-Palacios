@@ -27,20 +27,20 @@ h1{
 //!OPERACIONES
 $ancho:500px
 
-img{
-    width: $ancho / 2 -10;
-}
+// img{
+//     width: $ancho / 2 -10;
+// }
 
 
-//!MAPAS
-$boton:(
-    //KEY - VALOR
-    bg-boton:black,
-    borde: 2px solid tomate,
-    color-texto:white
-)
+// //!MAPAS
+// $boton:(
+//     //KEY - VALOR
+//     bg-boton:black,
+//     borde: 2px solid tomate,
+//     color-texto:white
+// )
 
-.boton{
-    background-color: map-get($boton , $bg-boton);
-    border:map-get($boton, borde)
-}
+// .boton{
+//     background-color: map-get($boton , $bg-boton);
+//     border:map-get($boton, borde)
+// }
